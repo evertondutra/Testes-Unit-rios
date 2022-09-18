@@ -16,7 +16,7 @@ class TestClass:
         assert resultado == esperado
 
     def test_quando_insere_nome_completo_retorna_ultimo_sobrenome(self):
-        fake = Faker()
+        fake = Faker(locale="pt-BR")
         nome = fake.name()
         nome_quebrado = nome.split(' ')
         esperado = nome_quebrado[-1]
